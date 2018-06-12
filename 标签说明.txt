@@ -1,0 +1,70 @@
+**********************************************************
+【自由获取指定栏目ID列表标签】
+作用范围：全站
+参数：typeinfo('7') 或 typeinfo('7,8,9,10')
+----------------------------------------------------------
+{volist name=":typeinfo('7,8,9,10')" id="typeinfo"}
+    <a href="{$typeinfo.url}">{$typeinfo.name}</a>
+{/volist}
+**********************************************************
+【自由获取友情链接列表标签】
+作用范围：全站
+参数：数量
+----------------------------------------------------------
+{volist name=":friendlink(2)" id="friendlink"}
+    <a href="{$friendlink.url}">{$friendlink.name}</a>
+{/volist}
+**********************************************************
+【自由获取指定父栏目ID下子栏目列表标签】
+作用范围：全站 如果指定父栏目ID为当前栏目ID则作用范围为当前栏目
+参数1：父栏目ID 0=>所有顶级栏目|当前栏目ID=>$type['id']|可以直接指定ID，如typelist(1,0)
+参数2：数据数量
+----------------------------------------------------------
+{volist name=":typelist($type['id'],0)" id="typelist"}
+    <a href="{$typelist.url}">{$typelist.name}</a>
+{/volist}
+**********************************************************
+【自由获取指定父栏目ID下子栏目列表标签】之【循环获取顶级栏目列表及二级栏目列表】
+作用范围：全站
+参数1：栏目ID 0=>所有顶级栏目
+参数2：数据数量
+----------------------------------------------------------
+{volist name=":typelist(0,0)" id="typelist"}
+    顶级栏目：{$typelist.name}
+        {volist name=":typelist($typelist['id'],0)" id="sub"}
+            <a href="{$sub.url}">{$sub.name}</a>
+        {/volist}
+	<hr>
+{/volist}
+**********************************************************
+【自由获取文章列表标签】
+作用范围：全站
+参数1：栏目ID 0=>所有栏目|当前栏目ID=>$type['id']|可以直接指定ID，如artlist(1,10,0)
+参数2：数据数量
+参数3：属性 0=>无属性，1=>置顶，2=>热门点击
+----------------------------------------------------------
+{volist name=":artlist($type['id'],5,1)" id="artlist"}
+    <li><a href="{$artlist.url}" title="{$artlist.title}">{$artlist.title}</a></li>
+{/volist}
+**********************************************************
+【当前栏目文章列表标签】
+作用范围：当前栏目文章列表页
+{$list.title|jj_substr=###,20} 20：中文字数
+分页标签 {$page}
+栏目名称 {$type.name} 同理=>{$type.keywords} {$type.description} {$type.url} {$type.id}
+----------------------------------------------------------
+{volist name='list' id='list'}
+    <li><a href="{$list.url}" title="{$list.title}">{$list.title|jj_substr=###,20}</a><em>{$list.pubdate}</em></li>
+{/volist}
+{$page}
+**********************************************************
+【文章内页标签】
+文章标题 {$article.title}
+同理=>{$article.id} {$article.click} {$article.pubdate} {$article.author} {$article.body} 
+**********************************************************
+包含标签：{include file='public/head'}
+**********************************************************
+其他全站通用标签
+网站名称{$web.name} 同理如下
+{$web.name} {$web.cmsurl} {$web.keywords} {$web.description} {$web.copyright} {$web.beian}
+{$web.domain}

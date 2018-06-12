@@ -3,9 +3,7 @@
 // 路由配置文件
 
 return [
-
-    'route_config_file' =>['index', 'admin'],
-
+    
     // 网站前台
     'lists/:id'     =>  'index/index/lists',    // 栏目分类
     'article/:id'   =>  'index/index/article',  // 文章内页
