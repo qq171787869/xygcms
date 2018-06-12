@@ -33,8 +33,8 @@ class User extends Model
     public function is_login()
     {
     	$user = [
-    		'email' => cookie('email'),
-    		'userpass' => cookie('userpass')
+    		'email' => input('cookie.email'),
+    		'userpass' => input('cookie.userpass')
     	];
     	$res = $this->where($user)->find();
         return $res;

@@ -23,8 +23,8 @@ class User extends Validate
     ];
 
     protected $scene = [
-        'add'   =>  ['email', 'userpass', 'userpass2'],
-        'login'  =>  ['email', 'userpass'],
+        'reg'   =>  ['email', 'userpass', 'userpass2'],
+        'login'  =>  ['email|email|require', 'userpass|require|min:6'],
         'edit'  =>  ['email'],
     ];
 }

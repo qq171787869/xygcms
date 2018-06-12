@@ -7,6 +7,8 @@ return [
     'app_debug'				=>	true,
     'url_route_must'        =>  false,
     'app_trace'              => false, 
+    // 默认全局过滤方法 用逗号分隔多个
+    'default_filter'         => 'htmlspecialchars',
 
     // 模板引擎设置
     'template'				=>	[

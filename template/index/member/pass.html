@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>修改密码</title>
+	<script src="http://apps.bdimg.com/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://apps.bdimg.com/libs/layer/2.1/layer.js"></script>
+	<link rel="stylesheet" href="__INDEX__/css/blog.css?ver={$web.version}">
+</head>
+<body>
+	
+	<form action="{:url('index/member/pass')}" method="post" id="form">
+		<p><input type="text" name="email" id="email" value="{$user.email}"></p>
+		<p><input type="password" name="userpass" id="userpass" value=""></p>
+		<p><input type="submit" class="reg" value="修改密码"></p>
+	</form>
+
+</body>
+</html>

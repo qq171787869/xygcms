@@ -13,9 +13,11 @@ return [
     'film/:id'      =>  'index/index/film',     // 电影内页
     'tags/:id'      =>  'index/index/tags',     // tags标签
     'comment/:aid'  =>  'index/index/comment',  // 文章评论
-    'member/reg'    =>  'index/member/reg',       // 用户注册
-    'member/login'  =>  'index/member/login',     // 用户登录
-    'member/info'   =>  'index/member/info',      // 用户中心
+    'member/reg'    =>  'index/member/reg',     // 用户注册
+    'member/login'  =>  'index/member/login',   // 用户登录
+    'member/pass'   =>  'index/member/pass',    // 用户登录
+    'member/info'   =>  'index/member/info',    // 用户中心
+    'member/logout' =>  'index/member/logout',  // 用户中心
     'image'         =>  'index/image/index',    // 图床页面
     'image/upload'  =>  'index/image/upload',   // 图床上传
     'image/del'     =>  'index/image/del',      // 图床删除
