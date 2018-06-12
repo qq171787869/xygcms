@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>修改密码</title>
+<link rel="stylesheet" href="__STATIC__/plugin/layui/css/layui.css">
+</head>
+<body style="margin:15px;background:#FFF">
+
+  <!-- 内容主体区域 -->
+  <form class="layui-form layui-form-pane" action="{:url('admin/main/pass')}" method="post">
+    <input type="hidden" name="action" value="edit">
+    <div class="layui-form-item">
+      <label class="layui-form-label">修改密码</label>
+      <div class="layui-input-block">
+        <input type="text" name="userpass" lay-verify="required" class="layui-input">
+      </div>
+    </div>
+    <div class="layui-form-item">
+      <label class="layui-form-label">二次确认</label>
+      <div class="layui-input-block">
+        <input type="text" name="userpass2" lay-verify="required" class="layui-input">
+      </div>
+    </div>
+    <div style="text-align:right;">
+      <button class="layui-btn layui-btn-normal">立即保存</button>
+    </div>
+  </form>
+
+<script src="__STATIC__/plugin/layui/layui.js"></script> 
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$article.title}-{$type.name}-{$web.name}</title>
+	<meta name="keywords" content="{$article.tags}"/>
+	<meta name="description" content="{$article.description}"/>
+	<link rel="stylesheet" href="__STATIC__/plugin/layui/css/layui.css">
+	<link rel="stylesheet" href="__INDEX__/css/blog.css?ver={$web.version}">
+</head>
+<body>
+	{include file='public/head'}
+	<div class="blog z">
+		<div class="art fl">
+			<h1>{$article.title}</h1>
+			<p class="info">时间：{$article.pubdate|date="Y-m-d",###} 作者：{$article.author} 点击：{$article.click}次</p>
+			<div class="litpic"><img src="{$article.litpic}" alt=""></div>
+			<div class="tags">{$article.tags|tags=###}</div>
+			<div class="body">{$article.body}</div>
+		</div>
+		<div class="blog-r fl">
+			{include file='public/right'}
+		</div>
+	</div>
+	{include file='public/foot'}
+</body>
+</html>

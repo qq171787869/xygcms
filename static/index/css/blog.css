@@ -1,0 +1,82 @@
+@charset "utf-8";
+/**
+ * 作者:小乙哥
+ * 网址：b2315.com
+ * 版本：v3.2
+ */
+body,p,h1,h2,h3,h4,h5,h6,form,ol,ul,input,dl,dd,select,textarea,td,th{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+table{border-collapse:collapse;border-spacing:0;}
+ul,ol,li{list-style:none;}
+img{border:none;vertical-align:top;}
+select,input{vertical-align:middle;}
+input[type="text"],input[type="password"],textarea{outline-style:none;-webkit-appearance:none;}
+a{text-decoration:none;outline:none;}
+a:link{color:#333;outline:none;}
+a:visited{color:#333;}
+a:hover,a:active,a:focus{color:#ff718f;}
+
+/* 基本样式 */
+@font-face{font-family:"Ubuntu";src:url("../fonts/Ubuntu-Light.woff") format('woff');font-weight:300}
+@font-face{font-family:"Ubuntu";src:url("../fonts/Ubuntu-Regular.woff") format('woff');font-weight:400}
+@font-face{font-family:"Ubuntu";src:url("../fonts/Ubuntu-Bold.woff") format('woff');font-weight:700}
+select,input,button,textarea,body{font-family:Ubuntu,"Bitstream Vera Sans","DejaVu Sans",Tahoma,sans-serif;color:#333;font-size:16px;line-height:1.6;font-weight:300}
+body{background:#e6e3e1;}
+
+/*通用样式*/
+.z{margin:0 auto;}
+.fl{float:left;}
+.fr{float:right;}
+
+/*网站框架*/
+.head,.main,.main-art,.foot{width:960px;}
+.head{height:100px;background:#FFF;}
+.logo{margin-top:10px;margin-left:10px;}
+.menu{width:920px;height:50px;padding:0 20px;background:#333333;}
+.menu a{display:inline-block;width:92px;height:50px;line-height:50px;text-align:center;color:#FFF;}
+.menu .login,.menu .reg{float:right;height:36px;line-height:36px;margin:6px 0 0 10px;border-radius:2px;background:#dd4814;}
+.foot{width:900px;padding:15px 30px 15px 30px;height:auto;background:#F2F2F2;}
+.foot p,.foot p a{color:#888;}
+
+/*用户页面*/
+.user{width:900px;padding:0 30px 30px 30px;height:auto;overflow:hidden;background:#FFF;}
+.user h1{font-size:32px;line-height:80px;}
+.user-l{width:400px;padding:0 30px 30px 30px;height:auto;overflow:hidden;background:#F7F7F7;border:1px solid #CDCDCD;border-radius:4px;}
+.user-l p{margin-top:20px;}
+.user-l input{display:block;width:100%;height:36px;border:1px solid #aea79f;text-indent:10px;}
+.user-l .reg,.user-l .login{cursor:pointer;border:1px solid #ad2e03;border-radius:2px;width:120px;height:40px;float:left;text-indent:0;background:#e04c16;color:#FFF;}
+.user-l .login{margin-left:30px;}
+.user-r{width:400px;margin-left:30px;}
+.user-r p{text-indent:30px;}
+
+/*图床页面*/
+.imgContainer{display:inline-block;width:190px;height:160px;margin:10px 5px;}
+.imgContainer img{display:block;width:188px;height:158px;border:1px solid #666;}
+.imgContainer p{text-indent:0;text-align:center;height:30px;line-height:30px;}
+
+/*博客页面*/
+.blog{width:920px;padding:0 20px 20px 20px;height:auto;overflow:hidden;background:#FFF;}
+.blog-l,.art{width:570px;height:auto;overflow:hidden;border:1px solid #cdcdcd;padding:2px 14px;margin-top:25px;margin-right:20px;background:#f7f7f7;}
+.blog-r{width:300px;height:auto;overflow:hidden;margin-top:25px;}
+.list li{border-bottom:1px dashed #A8A8A8;padding:3px;margin:3px;}
+.list li a{font-size:16px;line-height:36px;}
+.list li em{line-height:36px;float:right}
+.list li p{color:#888;line-height:26px;}
+.list li p img{display:inline-block;width:150px;height:100px;margin-right:8px;}
+
+.pagination{display:block;margin:15px 0;text-align:center;}
+.pagination li{display:inline-block;margin-right:10px;width:30px;height:30px;line-height:30px;text-align:center;border:1px solid #333333;border-radius:2px;color:#333333;}
+.pagination li a{display:block;}
+.pagination li.active{background:#333333;color:#FFF;}
+
+.art h1{font-size:22px;text-align:center;font-weight:bold;padding:15px 0 10px 0;}
+.art p.info{font-size:14px;color:#888;text-align:center;margin-bottom:10px;}
+.art .body p{text-indent:36px;}
+.art .body img{display:block;width:100%;margin:8px auto 8px auto;}
+
+#comment{height:auto;overflow:hidden;}
+#comment li{padding:10px 10px;margin-bottom:10px;background:#FFF;border:1px solid #CCC;border-radius:4px;}
+#comment li em{float:right;}
+#comment li p{}
+
+/*广告样式*/
+.ad-300-250{width:298px;height:250px;border:1px solid #AAA;margin-bottom:8px;}

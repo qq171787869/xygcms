@@ -1,0 +1,39 @@
+    <div class="layui-side layui-side-menu">
+      <div class="layui-side-scroll">
+        <div class="layui-logo">
+          <span><img src="__ADMIN__/img/logo.jpg"></span>
+        </div>
+        <ul class="layui-nav layui-nav-tree" lay-shrink="all" id="LAY-system-side-menu" lay-filter="layadmin-system-side-menu">
+          <li data-name="home" class="layui-nav-item">
+            <a href="javascript:;" lay-tips="主页" lay-direction="2">
+              <i class="layui-icon layui-icon-home"></i> <cite>后台首页</cite>
+            </a>
+            <dl class="layui-nav-child">
+              <dd><a lay-href="{:url('admin/main/main')}">后台首页</a></dd>
+            </dl>
+          </li>
+          <li data-name="article" class="layui-nav-item">
+            <a href="javascript:;" lay-tips="用户" lay-direction="2">
+              <i class="layui-icon layui-icon-read"></i> <cite>内容管理</cite>
+            </a>
+            <dl class="layui-nav-child">
+              <dd><a lay-href="{:url('admin/article/lists')}">文章管理</a></dd>
+              <dd><a lay-href="{:url('admin/film/lists')}">电影管理</a></dd>
+              <dd><a lay-href="{:url('admin/type/lists')}">栏目管理</a></dd>
+              <dd><a lay-href="{:url('admin/user/lists')}">用户管理</a></dd>
+              <dd><a lay-href="{:url('admin/link/lists')}">友链链接</a></dd>
+            </dl>
+          </li>
+          {switch name="level"}
+          {case value="1"}
+          <li data-name="comment" class="layui-nav-item">
+            <a href="javascript:;" lay-tips="系统设置" lay-direction="2" lay-href="{:url('admin/main/setting')}">
+              <i class="layui-icon layui-icon-set"></i> <cite>系统设置</cite>
+            </a>
+          </li>
+          {/case}
+          {default /}
+          {/switch}
+        </ul>
+      </div>
+    </div>

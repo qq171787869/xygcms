@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片上传</title>
+	<script src="http://apps.bdimg.com/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://apps.bdimg.com/libs/layer/2.1/layer.js"></script>
+	<link rel="stylesheet" href="__STATIC__/index/css/blog.css?ver={$web.version}">
+</head>
+<body>
+	<div class="head">
+		<a href="#"><img src="__STATIC__/index/img/logo.png" class="logo"></a>
+	</div>
+	<div class="main" style="height:500px">
+		<h1>图床，想传啥就传啥。</h1>
+		<div class="main-l">
+			<p>请选择要上传的图片</p>
+			<form id="upBox">
+				 <div id="inputBox">
+				 	<p><input type="hidden" name="key" value="demo"></p>
+				 	<p><input type="file" name="xyg-image[]" id="file" multiple accept="image/png,image/jpg,image/gif,image/JPEG"/></p>
+				 </div>
+				 <p><input type="button" class="reg" value="上传图片" id="btn"></p>
+			</form>
+		</div>
+		<div class="main-r" id="imgBox" style="margin-top:10px;">
+		</div>
+	</div>
+	<div class="foot">
+		<p>Ubuntu One. One place to log in to everything on Ubuntu.</p>
+		<p>Terms ·  隐私 ·  Support  ·  Switch language</p>
+		<p>© Copyright 2018 Canonical Ltd. ‘Ubuntu One’ and ‘Canonical’ are registered trademarks of Canonical Ltd.</p>
+	</div>
+</body>
+<script src="__STATIC__/index/js/uploadImg.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	imgUpload({
+		inputId:'file', //input框id
+		imgBox:'imgBox', //图片容器id
+		buttonId:'btn', //提交按钮id
+		upUrl:'{:url("image/upload")}',  //提交地址
+		data:'file1', //参数名
+		num:"6"//上传个数
+	})
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$type.name}-{$web.name}</title>
+	<meta name="keywords" content="{$type.keywords}"/>
+	<meta name="description" content="{$type.description}"/>
+	<script src="http://apps.bdimg.com/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://apps.bdimg.com/libs/layer/2.1/layer.js"></script>
+	<link rel="stylesheet" href="__INDEX__/css/blog.css?ver={$web.version}">
+</head>
+<body>
+	{include file='public/head'}
+	<div class="blog z">
+		<div class="blog-l fl">
+			<div class="list">
+				{volist name='list' id='list'}
+				<li>
+					<a href="{$list.url}" title="{$list.title}">{$list.title|jj_substr=###,20}</a>
+					<em>{$list.pubdate|date="Y-m-d",###}</em>
+				</li>
+				{/volist}
+			</div>
+			{$page}
+		</div>
+		<div class="blog-r fl">
+			{include file='public/right'}
+		</div>
+	</div>
+	{include file='public/foot'}
+</body>
+</html>

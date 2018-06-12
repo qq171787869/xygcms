@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>添加文章</title>
+<link rel="stylesheet" href="__STATIC__/plugin/layui/css/layui.css">
+</head>
+<body style="margin:15px;background:#FFF">
+
+	<!-- 内容主体区域 -->
+	<form class="layui-form layui-form-pane" action="{:url('admin/article/save')}" method="post">
+		<div class="layui-tab">
+		  <ul class="layui-tab-title">
+		    <li class="layui-this" style="padding:0 28px;">基本属性</li>
+		    <li>高级属性</li>
+		  </ul>
+		  <div class="layui-tab-content" style="border:1px solid #e6e6e6;border-top:none;">
+	  		<div class="layui-tab-item layui-show">
+	  			<div class="layui-form-item">
+	  				<label class="layui-form-label">文章标题</label>
+	  				<div class="layui-input-block">
+	  					<input type="text" name="title" lay-verify="required" placeholder="请输入标题" class="layui-input">
+	  				</div>
+	  			</div>
+	  			<div class="layui-form-item">
+	  				<label class="layui-form-label">隶属栏目</label>
+				    <div class="layui-input-block">
+				      <select name="typeid" lay-verify="required">
+				        {$option}
+				      </select>
+				    </div>
+	  			</div>
+	  			<div class="layui-form-item">
+				    <label class="layui-form-label">文章缩略图</label>
+				    <div class="layui-input-inline">
+				    	<input type="text" name="litpic" id="litpic" placeholder="点击上传选择图片" class="layui-input" value="">
+				    </div>
+				    <div class="layui-upload">
+					  <button type="button" class="layui-btn layui-btn-normal" id="test8"><i class="layui-icon">&#xe67c;</i>上传图片</button>
+					</div>
+				</div>
+	  			<div class="layui-form-item layui-form-text" style="margin-bottom:0;">
+					<label class="layui-form-label">文章内容</label>
+					<div class="layui-input-block">
+						<textarea class="layui-textarea" name="body" id="body"></textarea>
+					</div>
+				</div>
+	  		</div>
+		  	<div class="layui-tab-item">
+		  		<div class="layui-form-item">
+	  				<label class="layui-form-label">文章标签</label>
+	  				<div class="layui-input-block">
+	  					<input type="text" name="tags" placeholder="多个标签请用英文状态的逗号分开" class="layui-input">
+	  				</div>
+	  			</div>
+		  		<div class="layui-form-item">
+		  			<label class="layui-form-label">文章作者</label>
+		  			<div class="layui-input-block">
+		  				<input type="text" name="author" class="layui-input" value="{$web.author}">
+		  			</div>
+		  		</div>
+		  		<div class="layui-form-item">
+		  			<label class="layui-form-label">文章点击</label>
+		  			<div class="layui-input-block">
+		  				<input type="text" name="click" class="layui-input" value="{$web.click}">
+		  			</div>
+		  		</div>
+		  		<!-- <div class="layui-form-item">
+		  			<label class="layui-form-label">发布日期</label>
+		  			<div class="layui-input-block">
+		  				<input type="text" name="pubdate" class="layui-input">
+		  			</div>
+		  		</div> -->
+		  		<div class="layui-form-item">
+		  			<label class="layui-form-label">别名URL</label>
+		  			<div class="layui-input-block">
+		  				<input type="text" name="url" class="layui-input">
+		  			</div>
+		  		</div>
+		  		<div class="layui-form-item">
+		  			<label class="layui-form-label">置顶状态</label>
+		  			<div class="layui-input-block">
+				      <select name="istop" lay-verify="required">
+				        <option value="0" selected="">正常</option>
+				        <option value="1">置顶</option>
+				      </select>
+				    </div>
+		  		</div>
+		  		<div class="layui-form-item">
+		  			<label class="layui-form-label">文章状态</label>
+		  			<div class="layui-input-block">
+				      <select name="status" lay-verify="required">
+				        <option value="0">隐藏</option>
+				        <option value="1" selected="">正常</option>
+				      </select>
+				    </div>
+		  		</div>
+		  	</div>
+		  </div>
+		</div>
+		<div style="text-align:right;">
+			<button class="layui-btn layui-btn-normal">立即保存</button>
+		</div>
+	</form>
+<script src="__STATIC__/plugin/layui/layui.js"></script> 
+<script src="__ADMIN__/modules/lists-article.js"></script>
+</body>
+</html>

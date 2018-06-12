@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$web.name}</title>
+	<script src="http://apps.bdimg.com/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://apps.bdimg.com/libs/layer/2.1/layer.js"></script>
+	<link rel="stylesheet" href="__INDEX__/css/blog.css?ver={$web.version}">
+</head>
+<body>
+	{include file='public/head'}
+	<div class="blog z">
+		<div class="list">
+			<div class="blog-l fl">
+				{volist name=":artlist(0,10,0)" id="artlist"}
+				<li>
+					<a href="{$artlist.url}" title="{$artlist.title}">{$artlist.title|jj_substr=###,20}</a>
+					<em>{$artlist.pubdate|date="Y-m-d",###}</em>
+				</li>
+				{/volist}
+			</div>
+		</div>
+		<div class="blog-r">
+			<div class="link">
+				<h2>友情链接</h2>
+				{volist name=":friendlink(0)" id="friendlink"}
+				    <li><a href="{$friendlink.url}" target="_blank">{$friendlink.name}</a></li>
+				{/volist}
+			</div>
+		</div>
+	</div>
+	{include file='public/foot'}
+</body>
+</html>

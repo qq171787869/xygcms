@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>后台登录</title>
+	<script src="http://apps.bdimg.com/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://apps.bdimg.com/libs/layer/2.1/layer.js"></script>
+</head>
+<style>
+*{margin:0;padding:0;border:none;}
+body{font-family:'Microsoft Yahei';font-size:16px;line-height:28px;}
+.login{position:fixed;top:50%;left:50%;width:280px;height:300px;margin-left:-140px;margin-top:-200px;background:#F2F2F2;border:1px solid #A2A2A2;border-radius:3px;}
+.login h1{font-size:18px;color:#333;text-align:center;line-height:60px;border-bottom:1px solid #A2A2A2;}
+.login p{margin:20px 0 0 20px;}
+input{font-size:16px;}
+input[type="text"],input[type="password"]{width:180px;height:32px;line-height:32px;border:1px solid #888;margin-left:15px;text-indent:10px;}
+input[type="submit"],input[type="reset"]{width:80px;height:36px;line-height:36px;background:#1e9fff;margin-left:26px;color:#FFF;cursor:pointer;border-radius:3px;}
+</style>
+<body>
+	<div class="login">
+		<h1>XYGCMS后台登录</h1>
+		<form action="{:url('admin/index/login')}" method="post" id="form">
+			<p>账号<input type="text" name="username" id="username"></p>
+			<p>密码<input type="password" name="userpass" id="userpass"></p>
+			<p>口令<input type="password" name="key" id="key"></p>
+			<p><input type="submit" value="登陆"><input type="reset" value="重置"></p>
+		</form>
+	</div>
+</body>
+<script>
+	$('#form').submit(function(){
+		if($('#username').val()=='')
+		{
+			layer.alert('后台帐号未输入！');
+			return false;
+		};
+		if($('#userpass').val()=='')
+		{
+			layer.alert('后台密码未输入！');
+			return false;
+		};
+		if($('#key').val()=='')
+		{
+			layer.alert('后台口令未输入！');
+			return false;
+		};
+	})
+</script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>会员登陆</title>
+	<script src="http://apps.bdimg.com/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://apps.bdimg.com/libs/layer/2.1/layer.js"></script>
+	<link rel="stylesheet" href="__INDEX__/css/blog.css?ver={$web.version}">
+</head>
+<body>
+	
+	{include file='public/head'}
+
+	<div class="user z">
+		<h1>一个帐号享受我们的所有服务！</h1>
+		<div class="user-l fl">
+			<form action="{:url('index/member/login')}" method="post" id="form">
+				<p>会员账号登陆</p>
+				<p><input type="text" name="email" id="email" placeholder="输入邮箱帐号"></p>
+				<p><input type="password" name="userpass" id="userpass" placeholder="输入密码"></p>
+				<p><input type="submit" class="reg" value="创建账号"></p>
+			</form>
+		</div>
+		<div class="user-r fl">
+			<p>娉(pīng)娉袅(niǎo)袅十三馀(yú)，</p>
+			<p>豆蔻梢头二月初。</p>
+			<p>春风十里扬州路，</p>
+			<p>卷上珠帘总不如。</p>
+			<p>------唐*杜牧《赠别二首》</p>
+		</div>
+	</div>
+	
+	{include file='public/foot'}
+	
+</body>
+<script>
+	$('#form').submit(function(){
+		if($('#email').val()=='')
+		{
+			layer.alert('邮箱账号未输入！');
+			return false;
+		};
+		if($('#userpass').val()=='')
+		{
+			layer.alert('密码未输入！');
+			return false;
+		};
+	})
+</script>
+</html>

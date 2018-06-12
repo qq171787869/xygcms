@@ -1,0 +1,132 @@
+---------------------------------------------------------------
+[ 2018-06-13T01:26:21+08:00 ] 0.0.0.0 GET /lists/rihan.html
+[ info ] xygcms.demo.com/lists/rihan.html [运行时间：0.116006s][吞吐率：8.62req/s] [内存消耗：5,418.68kb] [文件加载：52]
+[ info ] [ LANG ] D:\wamp64\www-root\xygcms\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'lists',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'xygcms.demo.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://xygcms.demo.com/lists/4.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=163b94eca9b105-0b1dc35321aff9-6b1b1279-13c680-163b94eca9c241; __guid=179218349.2903575354497621000.1528821911720.7551; id=1; username=aliangnet; userpass=ea718de5b8a4f326e382438eb015a1c2; monitor_count=73',
+)
+[ info ] [ PARAM ] array (
+  'id' => 'rihan',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->lists[ D:\wamp64\www-root\xygcms\apps\index\controller\Index.php ]
+[ info ] [ VIEW ] template/index/index\list_film.html [ array (
+  0 => 'web',
+  1 => 'type',
+  2 => 'list',
+  3 => 'page',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-13T01:26:22+08:00 ] 0.0.0.0 GET /lists/rihan.html
+[ info ] xygcms.demo.com/lists/rihan.html [运行时间：0.115007s][吞吐率：8.70req/s] [内存消耗：5,167.55kb] [文件加载：50]
+[ info ] [ LANG ] D:\wamp64\www-root\xygcms\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'lists',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'xygcms.demo.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://xygcms.demo.com/lists/4.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=163b94eca9b105-0b1dc35321aff9-6b1b1279-13c680-163b94eca9c241; __guid=179218349.2903575354497621000.1528821911720.7551; id=1; username=aliangnet; userpass=ea718de5b8a4f326e382438eb015a1c2; monitor_count=74',
+)
+[ info ] [ PARAM ] array (
+  'id' => 'rihan',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->lists[ D:\wamp64\www-root\xygcms\apps\index\controller\Index.php ]
+[ info ] [ VIEW ] template/index/index\list_film.html [ array (
+  0 => 'web',
+  1 => 'type',
+  2 => 'list',
+  3 => 'page',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-13T01:29:45+08:00 ] 0.0.0.0 GET /member/login.html
+[ info ] xygcms.demo.com/member/login.html [运行时间：0.046003s][吞吐率：21.74req/s] [内存消耗：2,040.84kb] [文件加载：28]
+[ info ] [ LANG ] D:\wamp64\www-root\xygcms\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'xygcms.demo.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://xygcms.demo.com/lists/rihan.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=163b94eca9b105-0b1dc35321aff9-6b1b1279-13c680-163b94eca9c241; __guid=179218349.2903575354497621000.1528821911720.7551; id=1; username=aliangnet; userpass=ea718de5b8a4f326e382438eb015a1c2; monitor_count=75',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-13T01:30:26+08:00 ] 0.0.0.0 GET /favicon.ico
+[ info ] xygcms.demo.com/favicon.ico [运行时间：0.058004s][吞吐率：17.24req/s] [内存消耗：2,040.41kb] [文件加载：28]
+[ info ] [ LANG ] D:\wamp64\www-root\xygcms\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'favicon.ico',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'xygcms.demo.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'UM_distinctid=163b94eca9b105-0b1dc35321aff9-6b1b1279-13c680-163b94eca9c241; __guid=179218349.2903575354497621000.1528821911720.7551; id=1; username=aliangnet; userpass=ea718de5b8a4f326e382438eb015a1c2; monitor_count=77',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File

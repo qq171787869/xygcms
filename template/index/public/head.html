@@ -1,0 +1,11 @@
+<div class="head z">
+	<a href="{:url('index/index/index')}"><img src="__STATIC__/index/img/logo.png" class="logo"></a>
+</div>
+<div class="menu z">
+	<a href="{$web.cmsurl}">博客首页</a>
+	{volist name=":typelist(0,0)" id="typelist"}
+	<a href="{$typelist.url}">{$typelist.name}</a>
+	{/volist}
+	<a href="{:url('index/member/reg')}" class="reg">会员注册</a>
+	<a href="{:url('index/member/login')}" class="login">会员登陆</a>
+</div>

@@ -1,0 +1,18 @@
+<h2>{volist name=":typeinfo('7,8,9,10')" id="typeinfo"}
+<a href="{$typeinfo.url}">{$typeinfo.name}</a>
+{/volist}</h2>
+
+<hr><h2>【当前栏目子栏目】</h2>
+<p>参数1：栏目ID 0=>所有栏目 {$type['id']}</p>
+<p>参数2：数据数量</p><hr>
+{volist name=":typelist($type['id'],0)" id="typelist"}
+<a href="{$typelist.url}">{$typelist.name}</a>
+{/volist}
+
+<hr><h2>【自由获取文章列表标签】</h2>
+<p>参数1：栏目ID 0=>所有栏目</p>
+<p>参数2：数据数量</p>
+<p>参数3：属性 0=>无属性，1=>置顶，2=>热门点击</p><hr>
+{volist name=":artlist($type['id'],5,1)" id="artlist"}
+<li><a href="{$artlist.url}" title="{$artlist.title}">{$artlist.title}</a></li>
+{/volist}

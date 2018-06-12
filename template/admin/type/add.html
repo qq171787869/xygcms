@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>添加栏目</title>
+<link rel="stylesheet" href="__STATIC__/plugin/layui/css/layui.css">
+</head>
+<body style="margin:15px;background:#FFF">
+
+	<!-- 内容主体区域 -->
+	<form class="layui-form layui-form-pane" action="{:url('admin/type/save')}" method="post">
+		<div class="layui-tab">
+		  <ul class="layui-tab-title">
+		    <li class="layui-this" style="padding:0 28px;">基本属性</li>
+		    <li>高级属性</li>
+		    <li>栏目内容</li>
+		  </ul>
+		  <div class="layui-tab-content" style="border:1px solid #e6e6e6;border-top:none;">
+	  		<div class="layui-tab-item layui-show">
+	  			<div class="layui-form-item">
+	  				<label class="layui-form-label">栏目名称</label>
+	  				<div class="layui-input-block">
+	  					<input type="text" name="name" lay-verify="required" placeholder="请输入栏目名称" class="layui-input">
+	  				</div>
+	  			</div>
+	  			<div class="layui-form-item">
+	  				<label class="layui-form-label">栏目模型</label>
+				    <div class="layui-input-block">
+				    	<select name="model" lay-verify="required" lay-filter="model">
+					        <option value="1">文章模型</option>
+					        <option value="2">下载模型</option>
+					        <option value="3">电影模型</option>
+					        <option value="4">图集模型</option>
+					    </select>
+				    </div>
+	  			</div>
+	  			<div class="layui-form-item">
+	  				<label class="layui-form-label">父级栏目</label>
+				    <div class="layui-input-block">
+				      <select name="pid" lay-verify="required">
+				        <option value="0">顶级栏目</option>
+				        {$option}
+				      </select>
+				    </div>
+	  			</div>
+	  			<div class="layui-form-item">
+				    <label class="layui-form-label">栏目缩略图</label>
+				    <div class="layui-input-inline">
+				    	<input type="text" name="litpic" id="litpic" placeholder="点击上传选择图片" class="layui-input" value="">
+				    </div>
+				    <div class="layui-upload">
+					  <button type="button" class="layui-btn layui-btn-normal" id="test8"><i class="layui-icon">&#xe67c;</i>上传图片</button>
+					</div>
+				</div>
+				<div class="layui-form-item">
+	  				<label class="layui-form-label">栏目排序</label>
+	  				<div class="layui-input-block">
+	  					<input type="text" name="sort" class="layui-input" value="0">
+	  				</div>
+	  			</div>
+	  			<div class="layui-form-item">
+	  				<label class="layui-form-label">列表数量</label>
+	  				<div class="layui-input-block">
+	  					<input type="text" name="row" class="layui-input" value="{$web.row}">
+	  				</div>
+	  			</div>
+	  			<div class="layui-form-item" style="margin-bottom:0;">
+	  				<label class="layui-form-label">别名URL</label>
+	  				<div class="layui-input-block">
+	  					<input type="text" name="url" class="layui-input" placeholder="请输入别名URL">
+	  				</div>
+	  			</div>
+	  		</div>
+		  	<div class="layui-tab-item">
+		  		<div class="layui-form-item">
+	  				<label class="layui-form-label">关键字</label>
+	  				<div class="layui-input-block">
+	  					<input type="text" name="keywords" class="layui-input" placeholder="请输入栏目关键字">
+	  				</div>
+	  			</div>
+		  		<div class="layui-form-item">
+		  			<label class="layui-form-label">描述词</label>
+		  			<div class="layui-input-block">
+		  				<input type="text" name="description" class="layui-input" placeholder="请输入栏目描述词">
+		  			</div>
+		  		</div>
+		  		<div class="layui-form-item">
+		  			<label class="layui-form-label">列表模板</label>
+		  			<div class="layui-input-block">
+		  				<input type="text" name="listtpl" class="layui-input" value="list_article">
+		  			</div>
+		  		</div>
+		  		<div class="layui-form-item">
+		  			<label class="layui-form-label">内页模板</label>
+		  			<div class="layui-input-block">
+		  				<input type="text" name="itemtpl" class="layui-input" value="item_article">
+		  			</div>
+		  		</div>
+		  		<div class="layui-form-item">
+		  			<label class="layui-form-label">栏目权限</label>
+		  			<div class="layui-input-block">
+				      <select name="level" lay-verify="required">
+				        <option value="0" selected="">开放浏览</option>
+				        <option value="1">青铜会员</option>
+				        <option value="2">黄金会员</option>
+				        <option value="3">白金会员</option>
+				        <option value="4">钻石会员</option>
+				        <option value="5">王者会员</option>
+				      </select>
+				    </div>
+		  		</div>
+		  		<div class="layui-form-item" style="margin-bottom:0;">
+		  			<label class="layui-form-label">是否显示</label>
+		  			<div class="layui-input-block">
+				      <select name="status" lay-verify="required">
+				        <option value="0">隐藏</option>
+				        <option value="1" selected="">正常</option>
+				      </select>
+				    </div>
+		  		</div>
+		  	</div>
+		  	<div class="layui-tab-item">
+	  			<div class="layui-form-item layui-form-text" style="margin-bottom:0;">
+					<div class="layui-input-block">
+						<textarea class="layui-textarea" name="content" id="content"></textarea>
+					</div>
+				</div>
+		  	</div>
+		  </div>
+		</div>
+		<div style="text-align:right;">
+			<button class="layui-btn layui-btn-normal">立即保存</button>
+		</div>
+	</form>
+<script src="__STATIC__/plugin/layui/layui.js"></script> 
+<script src="__STATIC__/admin/modules/lists-type.js"></script>
+</body>
+</html>
